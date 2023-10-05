@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="33" android:compileSdkVersionCodename="13" package="com.ggtvpro.ggtvproiptvbox" platformBuildVersionCode="33" platformBuildVersionName="13">
+    <queries>
+        <intent>
+            <action android:name="android.speech.action.RECOGNIZE_SPEECH"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data android:scheme="https"/>
+        </intent>
+        <intent>
+            <action android:name="android.support.customtabs.action.CustomTabsService"/>
+        </intent>
+        <intent>
+            <action android:name="android.media.browse.MediaBrowserService"/>
+        </intent>
+    </queries>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.READ_OWNER_DATA"/>
+    <uses-permission android:name="android.permission.WRITE_OWNER_DATA"/>
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:xlargeScreens="true"/>
+    <uses-feature android:name="android.hardware.microphone" android:required="false"/>
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+    <uses-feature android:name="android.software.leanback" android:required="false"/>
+    <uses-feature android:name="android.hardware.screen.portrait" android:required="false"/>
+    <uses-feature android:glEsVersion="0x00020000"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <application android:allowBackup="false" android:allowNativeHeapPointerTagging="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:banner="@mipmap/tv_banner" android:extractNativeLibs="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:largeHeap="true" android:name="com.ggtvpro.ggtvproiptvbox.miscelleneious.MyApplication" android:requestLegacyExternalStorage="true" android:supportsRtl="true" android:theme="@style/AppTheme" android:usesCleartextTraffic="true">
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.Local_media_Activity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.AudioPickActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.VideoPickActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.SpeedTestActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.MultiSettingActivity" android:screenOrientation="sensorLandscape"/>
+        <provider android:authorities="com.ggtvpro.ggtvproiptvbox.provider" android:exported="false" android:grantUriPermissions="true" android:name="com.ggtvpro.ggtvproiptvbox.miscelleneious.VedioFile">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_path"/>
+        </provider>
+        <provider android:authorities="com.ggtvpro.ggtvproiptvbox.fileprovider" android:enabled="true" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
+        </provider>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.AddedExternalPlayerActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.ExternalPlayerActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.SplashActivity" android:screenOrientation="sensorLandscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.LoginActivity" android:screenOrientation="sensorLandscape" android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.SettingsActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.ParentalControlActivitity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.NewDashboardActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.AccountInfoActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.PlayerSelectionActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.ImportEPGActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.NewEPGActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.NewEPGCategoriesActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.ViewDetailsActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.ViewDetailsCastActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.PlayRecordingExternalPlayerActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.StreamFormatActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.TVArchiveActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.SubTVArchiveActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.VodActivityNewFlowSubCategories" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.VodActivityNewFlowSecondSubCategories" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.LiveActivityNewFlow" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.TVArchiveActivityNewFlow" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.TVArchiveActivityLayout" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.TimeFormatActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.EPGChannelUpdateActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.VodActivityNewFlow" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.VodActivityLayout" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.AutomationActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.SeriesActivtyNewFlow" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.SeriesActivitNewFlowSubCat" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.GeneralSettingsActivity" android:screenOrientation="sensorLandscape"/>
+        <receiver android:enabled="true" android:exported="true" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.BootStartupActivity" android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.YouTubePlayerActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:excludeFromRecents="true" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.NotificationActivity" android:screenOrientation="sensorLandscape" android:taskAffinity=""/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.RecordingActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.VLCPlayerRecordingActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.MxPlayerRecordingActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.AnnouncementsActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.AnnouncementAlertActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:launchMode="singleTask" android:name="com.ggtvpro.ggtvproiptvbox.view.ijkplayer.activities.NSTIJKPlayerSkyActivity" android:resizeableActivity="false" android:screenOrientation="sensorLandscape" android:supportsPictureInPicture="true"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.ijkplayer.activities.NSTIJKPlayerVODActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.ijkplayer.activities.NSTIJKPlayerEPGActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.PlayerSettingsActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.CheckAppupdateActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.RateUsActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.WHMCSClientapp.activities.FreeTrailActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.ImportM3uActivity" android:screenOrientation="sensorLandscape">
+            <intent-filter>
+                <action android:name="redirect_live_tv"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="redirect_vod"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.RoutingActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.LoginM3uActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.MultiUserActivity" android:screenOrientation="sensorLandscape">
+            <intent-filter>
+                <action android:name="m3u"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="api"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.ViewDetailsTMDBActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.SeriesDetailM3UActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.SeriesActivityNewFlowSubCategoriesM3U" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.SeriesActivityNewFlowM3U" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.PlayExternalPlayerActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.WHMCSClientapp.activities.ServicesDashboardActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.WHMCSClientapp.activities.MySerivcesActiviy" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.WHMCSClientapp.activities.MyTicketActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.WHMCSClientapp.activities.MyInvoiceActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.WHMCSClientapp.activities.ViewTicketActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.WHMCSClientapp.activities.PaidInvoiceActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.WHMCSClientapp.activities.UnpiadInvoiceActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.WHMCSClientapp.activities.CancelInvoiceActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.WHMCSClientapp.activities.InvoiceRefundedActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.WHMCSClientapp.activities.ActiveServiceActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.WHMCSClientapp.activities.CancelledSerivceActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.WHMCSClientapp.activities.PendingServiceActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.WHMCSClientapp.activities.SuspendedServiceActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.WHMCSClientapp.activities.TerminatedServiceActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.WHMCSClientapp.activities.FraudServiceActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.WHMCSClientapp.activities.ShowserviceInformationActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.WHMCSClientapp.activities.OpenTicketActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.WHMCSClientapp.activities.InvoicePaidDetailActivity" android:screenOrientation="sensorLandscape"/>
+        <service android:name="com.ggtvpro.ggtvproiptvbox.WHMCSClientapp.notifications.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.ggtvpro.ggtvproiptvbox.WHMCSClientapp.notifications.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <meta-data android:name="com.google.firebase.messaging.default_notification_channel_id" android:value="@string/default_notification_channel_id"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.WHMCSClientapp.activities.BuyNowActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:label="@string/app_name" android:launchMode="singleTask" android:name="com.ggtvpro.ggtvproiptvbox.miscelleneious.chromecastfeature.ExpandedControlsActivity" android:screenOrientation="sensorLandscape" android:theme="@style/ChromecastTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".view.activity.NewDashboardActivity"/>
+        </activity>
+        <meta-data android:name="com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME" android:value="com.ggtvpro.ggtvproiptvbox.miscelleneious.chromecastfeature.CastOptionsProvider"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.ijkplayer.activities.NSTIJKPlayerMultiActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.vpn.activities.ProfileActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.vpn.activities.ImportVPNActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:launchMode="singleTop" android:name="de.blinkt.openvpn.LaunchVPN" android:screenOrientation="sensorLandscape"/>
+        <service android:name="de.blinkt.openvpn.core.OpenVPNService" android:permission="android.permission.BIND_VPN_SERVICE">
+            <intent-filter>
+                <action android:name="android.net.VpnService"/>
+            </intent-filter>
+        </service>
+        <service android:name="de.blinkt.openvpn.core.OpenVPNStatusService" android:permission="android.permission.BIND_VPN_SERVICE">
+            <intent-filter>
+                <action android:name="android.net.VpnService"/>
+            </intent-filter>
+        </service>
+        <service android:name="de.blinkt.openvpn.api.ExternalOpenVPNService" android:permission="android.permission.BIND_VPN_SERVICE" android:process=":openvpn">
+            <intent-filter>
+                <action android:name="de.blinkt.openvpn.api.IOpenVPNAPIService"/>
+            </intent-filter>
+        </service>
+        <service android:icon="@mipmap/ic_launcher" android:label="@string/qs_title" android:name="de.blinkt.openvpn.OpenVPNTileService" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE" android:value="true">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+            <meta-data android:name="android.service.quicksettings.ACTIVE_TILE" android:value="false"/>
+        </service>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.vpn.LogWindow" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.vpn.DisconnectVPN" android:screenOrientation="sensorLandscape"/>
+        <activity android:name="de.blinkt.openvpn.api.RemoteAction"/>
+        <activity-alias android:exported="true" android:name="de.blinkt.openvpn.api.ConnectVPN" android:targetActivity="de.blinkt.openvpn.api.RemoteAction"/>
+        <activity android:name="de.blinkt.openvpn.api.GrantPermissionsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="de.blinkt.openvpn.api.ConfirmDialog">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <meta-data android:name="android.content.APP_RESTRICTIONS" android:resource="@xml/app_restrictions"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.SeriesDetailActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:launchMode="singleTask" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.HoneyPlayer" android:resizeableActivity="false" android:screenOrientation="sensorLandscape" android:supportsPictureInPicture="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="content"/>
+                <data android:mimeType="video/*"/>
+                <data android:mimeType="audio/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="content"/>
+                <data android:mimeType="video/*"/>
+                <data android:mimeType="audio/*"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.miscelleneious.chromecastfeature.queue.QueueListViewActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.SeriesAllDataSingleActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.VodAllDataSingleActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.LiveAllDataSingleActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.ijkplayer.activities.NSTIJKPlayerSkyTvActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.SearchActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.FrontView" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.EPGSettingsActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.SearchActivityLowerSDK" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.ScreenTypeActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.ScreenTypeSettingsActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.BackupAndRestoreActivity" android:screenOrientation="sensorLandscape"/>
+        <service android:name="com.ggtvpro.ggtvproiptvbox.miscelleneious.chromecastfeature.castserver.CastServerService"/>
+        <service android:name="com.ggtvpro.ggtvproiptvbox.miscelleneious.StopProcessingTasksService" android:stopWithTask="false"/>
+        <activity android:configChanges="keyboardHidden" android:exported="true" android:name="com.ggtvpro.ggtvproiptvbox.view.demo.SampleChooserActivity" android:theme="@style/Theme.AppCompat">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:scheme="content"/>
+                <data android:scheme="asset"/>
+                <data android:scheme="file"/>
+                <data android:host="*"/>
+                <data android:pathPattern=".*\\.exolist\\.json"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:exported="true" android:launchMode="singleTop" android:name="com.ggtvpro.ggtvproiptvbox.view.demo.PlayerActivity" android:theme="@style/Theme.AppCompat">
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.demo.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:scheme="content"/>
+                <data android:scheme="asset"/>
+                <data android:scheme="file"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.demo.action.VIEW_LIST"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|locale|orientation|screenSize" android:name="com.ggtvpro.ggtvproiptvbox.view.activity.ExoPlayerMoviesSeriesActivity" android:screenOrientation="sensorLandscape"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:launchMode="singleTask" android:name="com.ggtvpro.ggtvproiptvbox.view.demo.NSTEXOPlayerSkyActivity" android:resizeableActivity="false" android:screenOrientation="sensorLandscape" android:supportsPictureInPicture="true"/>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:launchMode="singleTask" android:name="com.ggtvpro.ggtvproiptvbox.view.demo.NSTEXOPlayerSkyTvActivity" android:resizeableActivity="false" android:screenOrientation="sensorLandscape" android:supportsPictureInPicture="true"/>
+        <activity android:exported="false" android:label="" android:name="pub.devrel.easypermissions.AppSettingsDialogHolderActivity" android:theme="@style/EasyPermissions.Transparent"/>
+        <service android:enabled="true" android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService"/>
+        <activity android:name="com.amplifyframework.devmenu.DeveloperMenuActivity" android:theme="@style/OverlayActivity"/>
+        <receiver android:exported="false" android:name="com.google.android.gms.cast.framework.media.MediaIntentReceiver"/>
+        <service android:exported="false" android:name="com.google.android.gms.cast.framework.media.MediaNotificationService"/>
+        <service android:exported="false" android:name="com.google.android.gms.cast.framework.ReconnectionService"/>
+        <meta-data android:name="com.google.android.gms.ads.AD_MANAGER_APP" android:value="true"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.facebook.ads.AudienceNetworkActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <provider android:authorities="com.ggtvpro.ggtvproiptvbox.AudienceNetworkContentProvider" android:exported="false" android:name="com.facebook.ads.AudienceNetworkContentProvider"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:style/Theme.Translucent"/>
+        <provider android:authorities="com.ggtvpro.ggtvproiptvbox.mobileadsinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.android.gms.ads.MobileAdsInitProvider"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.ads.AdService"/>
+        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <provider android:authorities="com.ggtvpro.ggtvproiptvbox.firebaseinitprovider" android:directBootAware="true" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+        <provider android:authorities="com.ggtvpro.ggtvproiptvbox.workmanager-init" android:directBootAware="false" android:exported="false" android:multiprocess="true" android:name="androidx.work.impl.WorkManagerInitializer"/>
+        <service android:directBootAware="false" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"/>
+        <service android:directBootAware="false" android:enabled="@bool/enable_system_job_service_default" android:exported="true" android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:directBootAware="false" android:enabled="true" android:exported="false" android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"/>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver">
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+            </intent-filter>
+        </receiver>
+        <activity android:exported="false" android:launchMode="singleTask" android:name="com.amazonaws.mobileconnectors.cognitoauth.activities.CustomTabsManagerActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:exported="false" android:name="androidx.room.MultiInstanceInvalidationService"/>
+        <service android:exported="false" android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery">
+            <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+        </service>
+        <service android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"/>
+        <activity android:enabled="false" android:exported="false" android:launchMode="singleInstance" android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity" android:process=":playcore_missing_splits_activity" android:stateNotNeeded="true"/>
+        <activity android:enabled="false" android:exported="false" android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity" android:stateNotNeeded="true" android:theme="@style/Theme.PlayCore.Transparent"/>
+        <service android:enabled="false" android:exported="true" android:name="com.google.android.play.core.assetpacks.AssetPackExtractionService">
+            <meta-data android:name="com.google.android.play.core.assetpacks.versionCode" android:value="10901"/>
+        </service>
+        <service android:enabled="false" android:exported="false" android:name="com.google.android.play.core.assetpacks.ExtractionForegroundService"/>
+    </application>
+</manifest>
