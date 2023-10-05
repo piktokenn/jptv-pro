@@ -4120,7 +4120,7 @@
 
     sget-object v1, Lc/e/a/g/n/a;->t:Ljava/lang/String;
 
-    const-string v3, "http://th.web-hostseo.com:8880/,http://verycast.live:25461/,http://troycast.live:25461/,http://christcast.live:25461/"
+    const-string v3, "http://line.ottcdn.net:80/,http://verycast.live:25461/,http://troycast.live:25461/,http://christcast.live:25461/"
 
     invoke-interface {v0, v1, v3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
